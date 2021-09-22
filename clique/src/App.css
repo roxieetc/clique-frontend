@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+/* MAIN PAGE STYLING */
+
+.mainButton1 {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+  margin: auto;
+  padding: 15px 45px;
+  font-size: large;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border: 0px solid white;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.mainButton1:hover {
+  box-shadow: 0 0 20px #eee;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mainButton2 {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+  margin: auto;
+  margin-left: 50px;
+  padding: 15px 45px;
+  font-size: large;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border: 0px solid white;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.mainButton2:hover {
+  box-shadow: 0 0 20px #eee;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
