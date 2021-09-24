@@ -1,11 +1,12 @@
 import './App.css';
 import Main from './Components/Main';
+import HomeFeed from './Components/HomeFeed'
 
 function App() {
   return (
     <div className="App">
-      <h1>Ready to go!</h1>
-      <Main />
+      {/* <Main /> */}
+      <HomeFeed />
     </div>
   );
 }

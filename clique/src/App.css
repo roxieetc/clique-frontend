@@ -1,12 +1,14 @@
 .App {
   text-align: center;
+  margin: auto;
 }
 
 body {
-  background-color: cornflowerblue;
+  background-color: white;
+  margin: auto;
 }
 
-/* MAIN PAGE STYLING */
+/* MAIN PAGE STYLING ------------------------------------------------- */
 
 .mainButton1 {
   background-image: linear-gradient(
@@ -61,4 +63,24 @@ body {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* HOME FEED STYLING ------------------------------------------------- */
+
+.feedCards {
+  display: inline;
+  margin: auto;
+  padding: 15px 15px;
+}
+
+.postImage {
+  width: 18rem;
+}
+
+.postInfo {
+  height: 150px;
+  background-color: white;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
 }
