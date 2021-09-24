@@ -5,14 +5,14 @@ function HomeFeed() {
     const postsUrl = "http://localhost:8000/api/posts/"
     const [posts, setPosts] = useState([]);
 
-    const fetchData = async () => {
+    const fetchPosts = async () => {
         const response = await fetch(postsUrl);
         const json = await response.json();
         setPosts(json)
     }
 
     useEffect(() => {
-        fetchData()
+        fetchPosts()
     }, []);
 
     return(

@@ -5,7 +5,7 @@ const Main = () => {
 
     return(
         <div className="mainPage">
-            <h4>This is the main page</h4>
+            <p>This is the main page</p>
             <button className="mainButton1">Sign Up</button>
             <button className="mainButton2">Log In</button>
         </div>
