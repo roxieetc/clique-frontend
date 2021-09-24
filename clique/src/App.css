@@ -5,7 +5,6 @@
 
 body {
   background-color: white;
-  margin: auto;
 }
 
 /* MAIN PAGE STYLING ------------------------------------------------- */
@@ -68,17 +67,21 @@ body {
 /* HOME FEED STYLING ------------------------------------------------- */
 
 .feedCards {
-  display: inline;
-  margin: auto;
   padding: 15px 15px;
 }
 
+.singlePost {
+  margin: auto;
+  box-shadow: 10px 10px 15px #e4e4e4;
+  border: 1px solid rgb(194, 194, 194);
+}
+
 .postImage {
-  width: 18rem;
+  width: 25rem;
 }
 
 .postInfo {
-  height: 150px;
+  height: 100px;
   background-color: white;
   text-align: left;
   padding-left: 10px;
