@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from 'react-bootstrap';
+import { Card, Container, Col, Row } from 'react-bootstrap';
 
 function HomeFeed() {
     const profilesUrl = "http://localhost:8000/api/profiles/"
@@ -11,12 +11,25 @@ function HomeFeed() {
         setProfiles(json)
     }
 
+   
+
+    const postUrl = "http://localhost:8000/api/posts/"
+    const [posts, setPosts] = useState([]);
+
+    const fetchPosts = async () => {
+        const response = await fetch(postUrl);
+        const json = await response.json();
+        setPosts(json)
+    }
+
     useEffect(() => {
         fetchProfiles()
+        fetchPosts()
     }, []);
 
+
     return(
-        <div className="postFeed">
+        <div className="myProfile">
             {profiles.map((profile) => {
                 const {username, profile_pic, bio} = profile
 
@@ -36,8 +49,22 @@ function HomeFeed() {
 
                 )
             })}
+
+            {posts.map((myposts) => {
+                const {post_pic} = myposts
+
+                return (
+                    <div className="profileFeed">
+                        <Container>
+                            <Row>
+                                <Col><img src={post_pic} className="feedPics" alt="feed pic"/></Col>
+                            </Row>
+                        </Container>
+                    </div>
+                )
+            })}
         </div>
     );
 }
 
-export default HomeFeed;
+export default HomeFeed;                                                                                                                                                                                                   
