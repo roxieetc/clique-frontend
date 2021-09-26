@@ -53,14 +53,11 @@ function HomeFeed() {
             {posts.map((myposts) => {
                 const {post_pic} = myposts
 
-                return (
-                    <div className="profileFeed">
-                        <Container>
-                            <Row>
-                                <Col><img src={post_pic} className="feedPics" alt="feed pic"/></Col>
-                            </Row>
-                        </Container>
-                    </div>
+            return (
+                
+                    
+                        <div><img src={post_pic} className="feedPics" alt="feed pic"/>
+                        </div>
                 )
             })}
         </div>

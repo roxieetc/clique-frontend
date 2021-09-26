@@ -2,7 +2,6 @@ body {
   background-color: rgb(250, 250, 250);
   font-size: 18px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: center;
 }
 
 /* MAIN PAGE STYLING ------------------------------------------------- */
@@ -11,7 +10,7 @@ body {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
-    #8e54e9 51%,
+    #54bfe9 51%,
     #4776e6 100%
   );
   margin: auto;
@@ -38,7 +37,7 @@ body {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
-    #8e54e9 51%,
+    #54bfe9 51%,
     #4776e6 100%
   );
   margin: auto;
@@ -99,9 +98,17 @@ body {
 }
 
 /* MYPROFILE STYLING ------------------------------------------------- */
-
 .profilePic {
-  float: left;
-  border: 4px solid #0c2e79;
   border-radius: 100%;
+  border: 4px solid #0c2e79;
+}
+
+.profileFeed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.feedPics {
+  max-width: 300px;
 }
