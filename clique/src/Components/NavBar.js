@@ -10,7 +10,7 @@ function NavBar() {
 
     return (
         <div>
-            <Navbar bg="light" className="navi">
+            <Navbar className="navi">
                 <Container>
                     <Navbar.Brand href="/home" className="logo">
                         <Link to='/home'>
