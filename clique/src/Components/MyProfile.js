@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 function HomeFeed() {
     const profilesUrl = "http://localhost:8000/api/profiles/"
@@ -10,8 +10,6 @@ function HomeFeed() {
         const json = await response.json();
         setProfiles(json)
     }
-
-   
 
     const postUrl = "http://localhost:8000/api/posts/"
     const [posts, setPosts] = useState([]);
@@ -28,40 +26,40 @@ function HomeFeed() {
     }, []);
 
 
-    return(
-        <div className="myProfile">
-            {profiles.map((profile) => {
-                const {username, profile_pic, bio} = profile
+    let profileFeed = posts.map((item) => {
+        return(
+            <Col sm={4}>
+                <Card style={{ width: "15rem", margin: "0, auto"}}>
+                        <Card.Img variant="top" src={item.post_pic} />
+                </Card>
+            </Col>
+        )
+    })
 
-                return (
-
-                    <div className="profile">
-                        <Card style={{ width: '25rem'}} className="profileCard">
-                            <Card.Img className="profilePic" variant="top" src={profile_pic} width="200" height="200"/>
-                            <Card.Title><strong>{username}</strong></Card.Title>
+    let profileInfo = profiles.map((item) => {
+        return(
+            <Card style={{ width: '15rem'}} className="profileCard">
+                            <Card.Img className="profilePic" variant="top" src={item.profile_pic} />
+                            <Card.Title><strong>{item.username}</strong></Card.Title>
                             <Card.Body className="myBio">
                                 <Card.Text>
-                                {bio}
+                                {item.bio}
                                 </Card.Text>
                             </Card.Body>
                             </Card>
-                    </div>
+        )
+    })
 
-                )
-            })}
-
-            {posts.map((myposts) => {
-                const {post_pic} = myposts
-
-            return (
-                
-                    
-                        <div><img src={post_pic} className="feedPics" alt="feed pic"/>
-                        </div>
-                )
-            })}
+    return(
+        
+        <div className="testerFeed">
+            {profileInfo}
+            <Row>    
+                {profileFeed}
+            </Row>
         </div>
-    );
+
+        );
 }
 
-export default HomeFeed;                                                                                                                                                                                                   
+export default HomeFeed;                                                                                                                                                                                                

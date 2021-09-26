@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Main from './Components/Main';
 import HomeFeed from './Components/HomeFeed';
 import NavBar from './Components/NavBar';
-import Profile from './Components/HomeTester';
+import Profile from './Components/MyProfile';
 
 function App() {
   return (

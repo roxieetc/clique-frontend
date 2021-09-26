@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 function HomeFeed() {
     const profilesUrl = "http://localhost:8000/api/profiles/"
@@ -28,7 +28,7 @@ function HomeFeed() {
 
     let profileFeed = posts.map((item) => {
         return(
-            <Col lg={3}>
+            <Col sm={4}>
                 <Card style={{ width: "15rem", margin: "0, auto"}}>
                         <Card.Img variant="top" src={item.post_pic} />
                 </Card>
@@ -36,10 +36,25 @@ function HomeFeed() {
         )
     })
 
+    let profileInfo = profiles.map((item) => {
+        return(
+            <Card style={{ width: '15rem'}} className="profileCard">
+                            <Card.Img className="profilePic" variant="top" src={item.profile_pic} />
+                            <Card.Title><strong>{item.username}</strong></Card.Title>
+                            <Card.Body className="myBio">
+                                <Card.Text>
+                                {item.bio}
+                                </Card.Text>
+                            </Card.Body>
+                            </Card>
+        )
+    })
+
     return(
         
         <div className="testerFeed">
-            <Row>
+            {profileInfo}
+            <Row>    
                 {profileFeed}
             </Row>
         </div>
