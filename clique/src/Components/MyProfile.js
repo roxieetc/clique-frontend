@@ -40,8 +40,8 @@ function HomeFeed() {
         return(
                 <Container className="profileInfo">
                     <Image className="profilePic" src={item.profile_pic} roundedCircle />
-                    {item.username}
-                    {item.bio}
+                    <div className="username">{item.username}</div>
+                    <div className="myBio">{item.bio}</div>
                 </Container>
         
             )
@@ -54,7 +54,7 @@ function HomeFeed() {
             <div className="myInfo">
                 {profileInfo}
             </div>
-
+            <hr />
             <div className="myPosts">
                 <Row>    
                     {profileFeed}

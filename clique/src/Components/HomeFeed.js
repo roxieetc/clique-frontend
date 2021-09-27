@@ -21,7 +21,7 @@ function HomeFeed() {
         return (
 
             <div className="feedCards">
-                <Card style={{ width: '25rem'}} className="singlePost">
+                <Card style={{ width: '35.1rem'}} className="singlePost">
                 <Card.Title><strong>{author}</strong></Card.Title>
                     <Card.Img className="postImage" variant="top" src={post_pic} />
                     <Card.Body className="postInfo">
