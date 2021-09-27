@@ -99,6 +99,7 @@ body {
 }
 
 /* MYPROFILE STYLING ------------------------------------------------- */
+
 .profilePic {
   border: 4px solid #0c2e79;
   max-height: 200px;
@@ -110,4 +111,16 @@ body {
 
 .profileInfo {
   margin-bottom: 50px;
+}
+
+/* NEW POST PAGE STYLING ------------------------------------------------- */
+
+.newPostForm {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 15vh;
+}
+
+.postButton {
+  background-color: #0c2e79;
 }
