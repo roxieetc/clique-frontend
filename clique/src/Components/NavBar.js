@@ -5,6 +5,7 @@ import logo from '../cliquelogo.png';
 import profile from '../profile.png';
 import newpost from '../newpost.png';
 import signout from '../signout.png';
+import home from '../homebutton.png';
 
 function NavBar() {
 
@@ -21,6 +22,7 @@ function NavBar() {
                             alt="Clique logo"
                         /></Link>
                     </Navbar.Brand>
+                    <Nav.Link href='/home' className="navLinks"><img src={home} alt="homeButton" /></Nav.Link>
                     <Nav.Link href="/myprofile" className="navLinks"><img src={profile} alt="profilelogo" /></Nav.Link>
                     <Nav.Link href="/newpost" className="navLinks"><img src={newpost} alt="newpostlogo" /></Nav.Link>
                     <Nav.Link href='/' className="navLinks"><img src={signout} alt="signoutlogo" /></Nav.Link>
