@@ -113,6 +113,10 @@ body {
   margin-bottom: 50px;
 }
 
+.myPosts {
+  margin-left: 8%;
+}
+
 /* NEW POST PAGE STYLING ------------------------------------------------- */
 
 .newPostForm {

@@ -28,8 +28,8 @@ function HomeFeed() {
 
     let profileFeed = posts.map((item) => {
         return(
-            <Col sm={4}>
-                <Card style={{ width: "20rem", margin: "0, auto"}}>
+            <Col sm={3}>
+                <Card style={{ width: "20rem"}}>
                         <Card.Img variant="top" src={item.post_pic} />
                 </Card>
             </Col>
@@ -50,10 +50,17 @@ function HomeFeed() {
     return(
         
         <div className="profileFeed">
+           
+            <div className="myInfo">
                 {profileInfo}
-            <Row>    
-                {profileFeed}
-            </Row>
+            </div>
+
+            <div className="myPosts">
+                <Row>    
+                    {profileFeed}
+                </Row>
+            </div>
+       
         </div>
 
         );
