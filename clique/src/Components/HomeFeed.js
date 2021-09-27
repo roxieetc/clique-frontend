@@ -15,7 +15,7 @@ function HomeFeed() {
         fetchPosts()
     }, []);
 
-    let homeFeed = posts.map((feed) => {
+    let homeFeed = posts.reverse().map((feed) => {
         const {post_pic, author, post_caption} = feed
 
         return (

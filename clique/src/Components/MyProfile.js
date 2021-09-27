@@ -26,7 +26,7 @@ function HomeFeed() {
     }, []);
 
 
-    let profileFeed = posts.map((item) => {
+    let profileFeed = posts.reverse().map((item) => {
         return(
             <Col sm={3}>
                 <Card style={{ width: "20rem"}}>
