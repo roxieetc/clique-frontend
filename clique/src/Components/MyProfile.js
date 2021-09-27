@@ -38,7 +38,7 @@ function HomeFeed() {
 
     let profileInfo = profiles.map((item) => {
         return(
-                <Container>
+                <Container className="profileInfo">
                     <Image className="profilePic" src={item.profile_pic} roundedCircle />
                     {item.username}
                     {item.bio}

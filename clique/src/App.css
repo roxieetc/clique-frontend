@@ -107,3 +107,7 @@ body {
 .profileFeed {
   margin: auto;
 }
+
+.profileInfo {
+  margin-bottom: 50px;
+}

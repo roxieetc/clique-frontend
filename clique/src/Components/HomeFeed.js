@@ -15,27 +15,29 @@ function HomeFeed() {
         fetchPosts()
     }, []);
 
+    let homeFeed = posts.map((feed) => {
+        const {post_pic, author, post_caption} = feed
+
+        return (
+
+            <div className="feedCards">
+                <Card style={{ width: '25rem'}} className="singlePost">
+                <Card.Title><strong>{author}</strong></Card.Title>
+                    <Card.Img className="postImage" variant="top" src={post_pic} />
+                    <Card.Body className="postInfo">
+                        <Card.Text>
+                        <strong>{author}:</strong> {post_caption}
+                        </Card.Text>
+                    </Card.Body>
+                    </Card>
+            </div>
+
+        )
+        })
+
     return(
         <div className="postFeed">
-            {posts.map((feed) => {
-                const {post_pic, author, post_caption} = feed
-
-                return (
-
-                    <div className="feedCards">
-                        <Card style={{ width: '25rem'}} className="singlePost">
-                        <Card.Title><strong>{author}</strong></Card.Title>
-                            <Card.Img className="postImage" variant="top" src={post_pic} />
-                            <Card.Body className="postInfo">
-                                <Card.Text>
-                                <strong>{author}:</strong> {post_caption}
-                                </Card.Text>
-                            </Card.Body>
-                            </Card>
-                    </div>
-
-                )
-            })}
+            {homeFeed}
         </div>
     );
 }
