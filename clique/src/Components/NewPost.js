@@ -4,16 +4,16 @@ import axios from "axios";
 
 function NewPost () {
 
-    const [imgurl, setImageUrl] = useState("")
-    const [caption, setCaption] = useState("")
     const [author, setAuthor] = useState("")
+    const [post_pic, setPostPic] = useState("")
+    const [post_caption, setPostCaption] = useState("")
 
     const submitPost = async () => {
         const url = "http://localhost:8000/api/posts/"
         axios.post(url, {
-            imgurl,
-            caption,
-            author
+            author,
+            post_pic,
+            post_caption
         })
         .then((res) => {
             console.log("Posted!")
@@ -21,11 +21,11 @@ function NewPost () {
     }
 
     const storeImgUrl = (e) => {
-        setImageUrl(e.target.value)
+        setPostPic(e.target.value)
     }
 
     const storeCaption = (e) => {
-        setCaption(e.target.value)
+        setPostCaption(e.target.value)
     }
 
     const storeAuthor = () => {
@@ -35,12 +35,12 @@ function NewPost () {
     return(
         <div className="newPostForm">
             <Form>
-  <Form.Group className="mb-3" controlId="postAuthor">
+  <Form.Group className="mb-3" controlId="author">
     <Form.Label>Author</Form.Label>
     <Form.Control type="text" placeholder="Enter username" onChange={storeAuthor} />
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="imgURL">
+  <Form.Group className="mb-3" controlId="post_pic">
     <Form.Label>Image URL</Form.Label>
     <Form.Control type="text" placeholder="Enter image URL here" onChange={storeImgUrl} />
     <Form.Text className="text-muted">
@@ -48,7 +48,7 @@ function NewPost () {
     </Form.Text>
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="imgCaption">
+  <Form.Group className="mb-3" controlId="post_caption">
     <Form.Label>Image Caption</Form.Label>
     <Form.Control as="textarea" rows={3} placeholder="Enter caption here...." onChange={storeCaption} />
   </Form.Group>
