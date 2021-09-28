@@ -34,14 +34,16 @@ function NewPost () {
 
     return(
         <div className="newPostForm">
+            <h1>Make A Post</h1>
+            <hr />
             <Form>
   <Form.Group className="mb-3" controlId="author">
-    <Form.Label>Author</Form.Label>
+    <Form.Label>Author:</Form.Label>
     <Form.Control type="text" placeholder="Enter username" onChange={storeAuthor} />
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="post_pic">
-    <Form.Label>Image URL</Form.Label>
+    <Form.Label>Image URL:</Form.Label>
     <Form.Control type="text" placeholder="Enter image URL here" onChange={storeImgUrl} />
     <Form.Text className="text-muted">
       Must be in .jpg/jpeg/png format
@@ -49,7 +51,7 @@ function NewPost () {
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="post_caption">
-    <Form.Label>Image Caption</Form.Label>
+    <Form.Label>Caption:</Form.Label>
     <Form.Control as="textarea" rows={3} placeholder="Enter caption here...." onChange={storeCaption} />
   </Form.Group>
  

@@ -151,3 +151,7 @@ body {
 .postButton {
   background-color: #0c2e79;
 }
+
+.mb-3 {
+  text-align: left;
+}
