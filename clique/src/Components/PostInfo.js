@@ -1,10 +1,12 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function PostInfo({ match }) {
 
     const [info, setInfo] = useState([]);
-    
+
     useEffect(() => {
         getInfo()
     }, []);
@@ -16,21 +18,29 @@ function PostInfo({ match }) {
         setInfo(data)
     }
 
+    const deletePost = async () => {
+        const url = `http://localhost:8000/api/posts/${match.params.id}`
+        axios.delete(url);
+    }
+
     console.log(info)
     if (!info) {
         return <h2>Loading</h2>
     } else {
         return (
-            <div className="feedCards">
-                <Card style={{ width: '35.1rem'}} className="singlePost">
-                <Card.Title><strong>{info.author}</strong></Card.Title>
-                    <Card.Img className="postImage" variant="top" src={info.post_pic} />
-                    <Card.Body className="postInfo">
+            <div className="detailCard">
+                <Card style={{ width: '35.1rem'}} className="detailPost">
+                <Card.Title className="detailTitle"><strong>{info.author}</strong></Card.Title>
+                    <Card.Img className="detailImage" variant="top" src={info.post_pic} />
+                    <Card.Body className="detailInfo">
                         <Card.Text>
                         <strong>{info.author}:</strong> {info.caption} <br /><span className="date">{info.created}</span>
                         </Card.Text>
                     </Card.Body>
                     </Card>
+
+                <Link to='#'><button className="editButton">Edit</button></Link>
+                <button className="deleteButton" onClick={deletePost}>Delete</button>
             </div>
         )}
    
