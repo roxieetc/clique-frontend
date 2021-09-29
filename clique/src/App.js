@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 import Profile from './Components/MyProfile';
 import PostForm from './Components/NewPost';
 import PostInfo from './Components/PostInfo';
+import Register from './Components/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/home' component={HomeFeed} />
       <Route exact path='/myprofile' component={Profile} />
       <Route exact path='/newpost' component={PostForm} />
+      <Route exact path='/register' component={Register} />
       <Route exact path='/:id' component={PostInfo} />
       </Switch>
       </Router>

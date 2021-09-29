@@ -34,7 +34,7 @@ function NewPost () {
 
     return(
         <div className="newPostForm">
-            <h1>Make A Post</h1>
+            <h2 className="makePostTitle">Make A Post</h2>
             <hr />
             <Form>
   <Form.Group className="mb-3" controlId="author">
@@ -45,10 +45,12 @@ function NewPost () {
   <Form.Group className="mb-3" controlId="post_pic">
     <Form.Label>Image URL:</Form.Label>
     <Form.Control type="text" placeholder="Enter image URL here" onChange={storeImgUrl} />
-    <Form.Text className="text-muted">
-      Must be in .jpg/jpeg/png format
-    </Form.Text>
   </Form.Group>
+
+{/* <Form.Group className="mb-3" controlId="post_pic">
+    <Form.Label>Image URL:</Form.Label>
+    <Form.Control type="file" onChange={storeImgUrl} />
+  </Form.Group> */}
 
   <Form.Group className="mb-3" controlId="post_caption">
     <Form.Label>Caption:</Form.Label>
