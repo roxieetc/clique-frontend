@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../cliquelogo.png';
+import logo from '../Clique2Color.png';
 import profile from '../profile.png';
 import newpost from '../newpost.png';
 import signout from '../signout.png';
@@ -17,8 +17,8 @@ function NavBar() {
                         <Link to='/home'>
                         <img
                             src={logo}
-                            width="100"
-                            height="50"
+                            width="120"
+                            height="70"
                             alt="Clique logo"
                         /></Link>
                     </Navbar.Brand>

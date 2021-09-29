@@ -6,14 +6,14 @@ function NewPost () {
 
     const [author, setAuthor] = useState("")
     const [post_pic, setPostPic] = useState("")
-    const [post_caption, setPostCaption] = useState("")
+    const [caption, setPostCaption] = useState("")
 
     const submitPost = async () => {
         const url = "http://localhost:8000/api/posts/"
         axios.post(url, {
             author,
             post_pic,
-            post_caption
+            caption
         })
         .then((res) => {
             console.log("Posted!")
@@ -28,8 +28,8 @@ function NewPost () {
         setPostCaption(e.target.value)
     }
 
-    const storeAuthor = () => {
-        setAuthor("1")
+    const storeAuthor = (e) => {
+        setAuthor(e.target.value)
     }
 
     return(
@@ -52,7 +52,7 @@ function NewPost () {
     <Form.Control type="file" onChange={storeImgUrl} />
   </Form.Group> */}
 
-  <Form.Group className="mb-3" controlId="post_caption">
+  <Form.Group className="mb-3" controlId="caption">
     <Form.Label>Caption:</Form.Label>
     <Form.Control as="textarea" rows={3} placeholder="Enter caption here...." onChange={storeCaption} />
   </Form.Group>

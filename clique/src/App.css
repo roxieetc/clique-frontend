@@ -71,16 +71,22 @@ body {
 .feedCards {
   padding: 15px 15px;
   margin-top: 15px;
+  color: #0c2e79;
 }
 
 .singlePost {
   margin: auto;
   /* box-shadow: 10px 10px 15px #ececec; */
-  border: 1px solid rgb(194, 194, 194);
+  border: double 8px transparent;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #ff9100, rgb(255, 157, 173), #0e59fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 .postImage {
-  width: 35rem;
+  width: 33rem;
+  margin: auto;
 }
 
 .postInfo {
@@ -89,6 +95,18 @@ body {
   text-align: left;
   padding-left: 10px;
   padding-top: 5px;
+}
+
+.date {
+  font-size: 12px;
+  color: #999999;
+}
+
+.homeUsername {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
 }
 
 /* NAVBAR STYLING ------------------------------------------------- */
@@ -119,6 +137,7 @@ body {
 
 .profileFeed {
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .profileInfo {

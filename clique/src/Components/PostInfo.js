@@ -5,18 +5,19 @@ function PostInfo({ match }) {
 
     const [info, setInfo] = useState([]);
     
-    const getInfo = async () => {
-        const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
-        const json = await response.json();
-        setInfo(json)
-    }
-
     useEffect(() => {
         getInfo()
     }, []);
 
+    const getInfo = async () => {
+        const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
+        const data = await response.json();
+        setInfo(data.id)
+        console.log(data.id)
+    }
+
     let postDeets = info.map((item) => {
-        const {post_pic, author, post_caption} = item
+        const {post_pic, author, caption, created} = item
         return (
             <div className="feedCards">
                 <Card style={{ width: '35.1rem'}} className="singlePost">
@@ -24,7 +25,7 @@ function PostInfo({ match }) {
                     <Card.Img className="postImage" variant="top" src={post_pic} />
                     <Card.Body className="postInfo">
                         <Card.Text>
-                        <strong>{author}:</strong> {post_caption}
+                        <strong>{author}:</strong> {caption} <br /><span className="date">{created}</span>
                         </Card.Text>
                     </Card.Body>
                     </Card>
