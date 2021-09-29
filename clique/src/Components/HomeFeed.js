@@ -16,7 +16,7 @@ function HomeFeed() {
     }, []);
 
     let homeFeed = posts.reverse().map((feed) => {
-        const {post_pic, author, post_caption} = feed
+        const {post_pic, author, caption} = feed
 
         return (
 
@@ -26,7 +26,7 @@ function HomeFeed() {
                     <Card.Img className="postImage" variant="top" src={post_pic} />
                     <Card.Body className="postInfo">
                         <Card.Text>
-                        <strong>{author}:</strong> {post_caption}
+                        <strong>{author}:</strong> {caption}
                         </Card.Text>
                     </Card.Body>
                     </Card>

@@ -6,7 +6,7 @@ function PostInfo({ match }) {
     const [info, setInfo] = useState([]);
     
     const getInfo = async () => {
-        const response = await fetch(`http://localhost:8000/api/profiles/${match.params.id}`);
+        const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
         const json = await response.json();
         setInfo(json)
     }
