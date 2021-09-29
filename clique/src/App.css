@@ -19,14 +19,14 @@ body {
 .mainButton1 {
   background-image: linear-gradient(
     to right,
-    #36d1dc 0%,
-    #5b86e5 51%,
-    #36d1dc 100%
+    #ffafbd 0%,
+    #ffc3a0 51%,
+    #ffafbd 100%
   );
   margin: auto;
   margin-top: 35px;
   padding: 15px 45px;
-  font-size: large;
+  font-size: 16px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -47,14 +47,14 @@ body {
 .mainButton2 {
   background-image: linear-gradient(
     to right,
-    #36d1dc 0%,
-    #5b86e5 51%,
-    #36d1dc 100%
+    #ffafbd 0%,
+    #ffc3a0 51%,
+    #ffafbd 100%
   );
   margin: auto;
   margin-left: 50px;
   padding: 15px 45px;
-  font-size: large;
+  font-size: 16px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
