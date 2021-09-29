@@ -206,7 +206,7 @@ body {
 .registerForm {
   max-width: 500px;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   /* border: solid 3px white; */
   box-shadow: 10px 10px 20px #ececec;
   padding: 30px 30px;

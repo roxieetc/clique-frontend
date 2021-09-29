@@ -12,32 +12,28 @@ function PostInfo({ match }) {
     const getInfo = async () => {
         const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
         const data = await response.json();
-        setInfo(data.id)
-        console.log(data.id)
+        console.log(data)
+        setInfo(data)
     }
 
-    let postDeets = info.map((item) => {
-        const {post_pic, author, caption, created} = item
+    console.log(info)
+    if (!info) {
+        return <h2>Loading</h2>
+    } else {
         return (
             <div className="feedCards">
                 <Card style={{ width: '35.1rem'}} className="singlePost">
-                <Card.Title><strong>{author}</strong></Card.Title>
-                    <Card.Img className="postImage" variant="top" src={post_pic} />
+                <Card.Title><strong>{info.author}</strong></Card.Title>
+                    <Card.Img className="postImage" variant="top" src={info.post_pic} />
                     <Card.Body className="postInfo">
                         <Card.Text>
-                        <strong>{author}:</strong> {caption} <br /><span className="date">{created}</span>
+                        <strong>{info.author}:</strong> {info.caption} <br /><span className="date">{info.created}</span>
                         </Card.Text>
                     </Card.Body>
                     </Card>
             </div>
-        )
-    })
-
-    return(
-        <div>
-        {postDeets}
-        </div>
-    )
+        )}
+   
 }
 
 export default PostInfo;
