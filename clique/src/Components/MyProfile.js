@@ -42,6 +42,7 @@ function HomeFeed() {
                 <Container className="profileInfo">
                     <Image className="profilePic" src={item.profile_pic} roundedCircle />
                     <div className="username">{item.username}</div>
+                    <div className="realName">({item.first_name} {item.last_name})</div>
                     <div className="myBio">{item.bio}</div>
                 </Container>
         
