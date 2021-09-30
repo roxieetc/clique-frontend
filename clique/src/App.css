@@ -82,7 +82,7 @@ body {
 
 .singlePost {
   margin: auto;
-  /* box-shadow: 10px 10px 15px #ececec; */
+  box-shadow: 10px 10px 15px #ececec;
   border: double 8px transparent;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #ff9100, rgb(255, 157, 173), #0e59fa);

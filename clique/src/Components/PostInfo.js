@@ -40,7 +40,10 @@ function PostInfo({ match }) {
                     </Card>
 
                 <Link to={`editpost/${info.id}`}><button className="editButton">Edit</button></Link>
-                <Link to='/myprofile'><button className="deleteButton" onClick={deletePost}>Delete</button></Link>
+                <Link to='/myprofile'><button className="deleteButton" onClick={() => {
+                deletePost()
+                getInfo()
+            }}>Delete</button></Link>
             </div>
         )}
    
