@@ -47,11 +47,6 @@ function NewPost () {
     <Form.Control type="text" placeholder="Enter image URL here" onChange={storeImgUrl} />
   </Form.Group>
 
-{/* <Form.Group className="mb-3" controlId="post_pic">
-    <Form.Label>Image URL:</Form.Label>
-    <Form.Control type="file" onChange={storeImgUrl} />
-  </Form.Group> */}
-
   <Form.Group className="mb-3" controlId="caption">
     <Form.Label>Caption:</Form.Label>
     <Form.Control as="textarea" rows={3} placeholder="Enter caption here...." onChange={storeCaption} />

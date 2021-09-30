@@ -39,8 +39,8 @@ function PostInfo({ match }) {
                     </Card.Body>
                     </Card>
 
-                <Link to='#'><button className="editButton">Edit</button></Link>
-                <button className="deleteButton" onClick={deletePost}>Delete</button>
+                <Link to={`editpost/${info.id}`}><button className="editButton">Edit</button></Link>
+                <Link to='/myprofile'><button className="deleteButton" onClick={deletePost}>Delete</button></Link>
             </div>
         )}
    

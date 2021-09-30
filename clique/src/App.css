@@ -151,7 +151,7 @@ body {
 }
 
 .myPosts {
-  margin-left: 8%;
+  margin: 5vw;
 }
 
 .username {
@@ -296,4 +296,40 @@ body {
   border-radius: 100px;
   display: inline-block;
   width: 150px;
+}
+
+/* EDIT POST FORM STYLING ------------------------------------------------- */
+
+.updateForm {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 15vh;
+  /* border: solid 3px white; */
+  box-shadow: 10px 10px 20px #ececec;
+  padding: 30px 30px;
+  background-image: linear-gradient(
+    to bottom right,
+    #4d85ff 0%,
+    #fdb8c4 50%,
+    #ffb759 100%
+  );
+  border-radius: 5%;
+  font-size: medium;
+  color: white;
+}
+
+.postButton {
+  background-color: #6289db;
+  width: 125px;
+  border: none;
+  margin-top: 10px;
+}
+
+.mb-3 {
+  text-align: left;
+}
+
+.updateTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
 }

@@ -7,6 +7,7 @@ import Profile from './Components/MyProfile';
 import PostForm from './Components/NewPost';
 import PostInfo from './Components/PostInfo';
 import Register from './Components/Register';
+import UpdatePost from './Components/UpdatePost';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route exact path='/newpost' component={PostForm} />
       <Route exact path='/register' component={Register} />
       <Route exact path='/:id' component={PostInfo} />
+      <Route exact path='/editpost/:id' component={UpdatePost} />
       </Switch>
       </Router>
     </div>
