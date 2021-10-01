@@ -72,6 +72,12 @@ body {
   cursor: pointer;
 }
 
+.welcomeText {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 /* HOME FEED STYLING ------------------------------------------------- */
 
 .feedCards {
@@ -163,6 +169,10 @@ body {
 .realName {
   font-size: 14px;
   color: #999;
+}
+
+.profiles {
+  display: inline-flex;
 }
 
 /* NEW POST PAGE STYLING ------------------------------------------------- */
@@ -342,4 +352,40 @@ body {
   max-width: 250px;
   margin: 15px;
   border: 4px solid white;
+}
+
+/* COMMENT FORM STYLING ------------------------------------------------- */
+
+.commentForm {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 15vh;
+  /* border: solid 3px white; */
+  box-shadow: 10px 10px 20px #ececec;
+  padding: 30px 30px;
+  background-image: linear-gradient(
+    to bottom right,
+    #4d85ff 0%,
+    #fdb8c4 50%,
+    #ffb759 100%
+  );
+  border-radius: 5%;
+  font-size: medium;
+  color: white;
+}
+
+.commentButton {
+  background-color: #6289db;
+  width: 150px;
+  border: none;
+  margin-top: 10px;
+}
+
+.commentTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+}
+
+.addUsername {
+  margin-bottom: 20px;
 }

@@ -23,7 +23,6 @@ function PostInfo({ match }) {
     const getComment = async () => {
         const response = await fetch(`http://localhost:8000/api/comments/${match.params.id}/`);
         const data = await response.json();
-        console.log(data)
         setComment(data)
     }
 
@@ -39,16 +38,17 @@ function PostInfo({ match }) {
                     <Card.Img className="detailImage" variant="top" src={info.post_pic} />
                     <Card.Body className="detailInfo">
                         <Card.Text>
-                        <strong>{info.author}:</strong> {info.caption} <br /><span className="date">{info.created}</span>
+                        <strong>{info.author} </strong> {info.caption} <br /><span className="date">{info.created}</span>
                         </Card.Text>
                     
                     <Card.Text className="commentSection">
-                        <strong>{comment.author}:</strong> {comment.body} <br /><span className="date">{comment.created}</span>
+                        <strong>{comment.author}</strong> {comment.body} <br /><span className="date">{comment.created}</span>
                     </Card.Text>
                     </Card.Body>
                 </Card>
 
 
+                <Link to={`comment/${info.id}`}><button className="editButton">Comment</button></Link>
                 <Link to={`editpost/${info.id}`}><button className="editButton">Edit</button></Link>
                 <Link to='/myprofile'><button className="deleteButton" onClick={() => {
                 deletePost()

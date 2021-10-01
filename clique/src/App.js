@@ -8,6 +8,7 @@ import PostForm from './Components/NewPost';
 import PostInfo from './Components/PostInfo';
 import Register from './Components/Register';
 import UpdatePost from './Components/UpdatePost';
+import MakeComment from './Components/MakeComment';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route exact path='/register' component={Register} />
       <Route exact path='/:id' component={PostInfo} />
       <Route exact path='/editpost/:id' component={UpdatePost} />
+      <Route exact path='/comment/:id' component={MakeComment} />
       </Switch>
       </Router>
     </div>
