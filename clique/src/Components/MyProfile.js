@@ -3,7 +3,7 @@ import { Card, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function HomeFeed() {
-    const profilesUrl = "http://localhost:8000/api/profiles/"
+    const profilesUrl = "http://localhost:8000/api/profiles/roxieetc"
     const [profiles, setProfiles] = useState([]);
 
     const fetchProfiles = async () => {
@@ -37,29 +37,34 @@ function HomeFeed() {
         )
     })
 
-    let profileInfo = profiles.map((item) => {
-        return(
-                <Container className="profileInfo">
-                    <Image className="profilePic" src={item.profile_pic} roundedCircle />
-                    <div className="username">{item.username}</div>
-                    <div className="realName">({item.first_name} {item.last_name})</div>
-                    <div className="myBio">{item.bio}</div>
-                </Container>
+    // let profileInfo = profiles.map((item) => {
+    //     return(
+    //             <Container className="profileInfo">
+    //                 <Image className="profilePic" src={item.profile_pic} roundedCircle />
+    //                 <div className="username">{item.username}</div>
+    //                 <div className="realName">({item.first_name} {item.last_name})</div>
+    //                 <div className="myBio">{item.bio}</div>
+    //             </Container>
         
-            )
-    })
+    //         )
+    // })
 
     return(
         
         <div className="profileFeed">
            
             <div className="myInfo">
-                {profileInfo}
+            <Container className="profileInfo">
+                    <Image className="profilePic" src={profiles.profile_pic} roundedCircle />
+                     <div className="username">{profiles.username}</div>
+                     <div className="realName">({profiles.first_name} {profiles.last_name})</div>
+                     <div className="myBio">{profiles.bio}</div>
+                 </Container>
             </div>
             <hr />
             <div className="myPosts">
                 <Row>    
-                    {profileFeed}
+                {profileFeed}
                 </Row>
             </div>
        

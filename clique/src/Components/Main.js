@@ -11,7 +11,7 @@ const Main = () => {
             <img src={BigLogo} className="biglogo" alt="clique logo big" />
             <br />
             <Link to='/register'><button className="mainButton1">Sign Up</button></Link>
-            <button className="mainButton2">Log In</button>
+            {/* <button className="mainButton2">Log In</button> */}
         </div>
     )
 }

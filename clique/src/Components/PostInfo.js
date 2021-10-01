@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 function PostInfo({ match }) {
 
     const [info, setInfo] = useState([]);
-
-    useEffect(() => {
-        getInfo()
-    }, []);
+    const [comment, setComment] = useState([]);
 
     const getInfo = async () => {
         const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
@@ -23,10 +20,18 @@ function PostInfo({ match }) {
         axios.delete(url);
     }
 
-    console.log(info)
-    if (!info) {
-        return <h2>Loading</h2>
-    } else {
+    const getComment = async () => {
+        const response = await fetch(`http://localhost:8000/api/comments/${match.params.id}/`);
+        const data = await response.json();
+        console.log(data)
+        setComment(data)
+    }
+
+    useEffect(() => {
+        getInfo()
+        getComment()
+    }, []);
+
         return (
             <div className="detailCard">
                 <Card style={{ width: '35.1rem'}} className="detailPost">
@@ -36,8 +41,13 @@ function PostInfo({ match }) {
                         <Card.Text>
                         <strong>{info.author}:</strong> {info.caption} <br /><span className="date">{info.created}</span>
                         </Card.Text>
+                    
+                    <Card.Text className="commentSection">
+                        <strong>{comment.author}:</strong> {comment.body} <br /><span className="date">{comment.created}</span>
+                    </Card.Text>
                     </Card.Body>
-                    </Card>
+                </Card>
+
 
                 <Link to={`editpost/${info.id}`}><button className="editButton">Edit</button></Link>
                 <Link to='/myprofile'><button className="deleteButton" onClick={() => {
@@ -47,6 +57,6 @@ function PostInfo({ match }) {
             </div>
         )}
    
-}
+
 
 export default PostInfo;
