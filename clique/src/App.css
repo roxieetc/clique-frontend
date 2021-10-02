@@ -157,7 +157,15 @@ body {
 }
 
 .myPosts {
-  margin: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryImage {
+  max-width: 400px;
+  max-height: 300px;
+  margin: 5px;
 }
 
 .username {

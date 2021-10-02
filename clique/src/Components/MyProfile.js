@@ -29,11 +29,13 @@ function HomeFeed() {
 
     let profileFeed = posts.reverse().map((item) => {
         return(
-            <Col sm={3}>
-                <Card style={{ width: "20rem"}}>
-                <Link className="thisPost" to={`/${item.id}`}><Card.Img variant="top" src={item.post_pic} /></Link>
-                </Card>
-            </Col>
+            <div>
+            {/* <Col sm={3}> */}
+                {/* <Card style={{ width: "20rem"}}> */}
+                <Link className="thisPost" to={`/${item.id}`}><img src={item.post_pic} className="galleryImage"  /></Link>
+                 {/* </Card> */}
+            {/* </Col> */}
+            </div>
         )
     })
 
@@ -59,9 +61,9 @@ function HomeFeed() {
             </div>
             <hr />
             <div className="myPosts">
-                <Row>    
+                {/* <Row>     */}
                     {profileFeed}
-                </Row>
+                {/* </Row> */}
             </div>
        
         </div>

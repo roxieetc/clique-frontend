@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from 'react-bootstrap';
 
 function HomeFeed() {
+    
     const postsUrl = "http://localhost:8000/api/posts/"
     const [posts, setPosts] = useState([]);
 
