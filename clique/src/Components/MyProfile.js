@@ -53,7 +53,7 @@ function HomeFeed() {
     return(
         
         <div className="profileFeed">
-           
+           <h1 className="activeProfiles">Active Profiles</h1>
             <div className="myInfo">
                 {profileInfo}
             </div>

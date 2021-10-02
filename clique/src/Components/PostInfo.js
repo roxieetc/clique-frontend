@@ -11,7 +11,6 @@ function PostInfo({ match }) {
     const getInfo = async () => {
         const response = await fetch(`http://localhost:8000/api/posts/${match.params.id}`);
         const data = await response.json();
-        console.log(data)
         setInfo(data)
     }
 
@@ -21,7 +20,7 @@ function PostInfo({ match }) {
     }
 
     const getComment = async () => {
-        const response = await fetch(`http://localhost:8000/api/comments/${match.params.id}/`);
+        const response = await fetch(`http://localhost:8000/api/comments/`);
         const data = await response.json();
         setComment(data)
     }
@@ -30,6 +29,28 @@ function PostInfo({ match }) {
         getInfo()
         getComment()
     }, []);
+
+    // console.log(comment.map((feed) => { return (feed.post)}))                Will  pull all comments' post values
+    // console.log(info.id)                                                     Will pull the post id that is being matched in the parameter.
+
+    let theseComments = [];
+    for(let i = 0; i < comment.length; i++) {
+        if (comment[i].post === info.id) {
+            theseComments.push(comment[i]);
+        }
+    }
+
+        let postComments = theseComments.map((feed) => {
+            const {author, body, created} = feed
+
+            return (
+                <div>
+                    <Card.Text className="commentSection">
+                        <strong>{author}</strong> {body} <br /><span className="date">{created}</span>
+                    </Card.Text>
+                </div>
+            )
+        })
 
         return (
             <div className="detailCard">
@@ -40,10 +61,7 @@ function PostInfo({ match }) {
                         <Card.Text>
                         <strong>{info.author} </strong> {info.caption} <br /><span className="date">{info.created}</span>
                         </Card.Text>
-                    
-                    <Card.Text className="commentSection">
-                        <strong>{comment.author}</strong> {comment.body} <br /><span className="date">{comment.created}</span>
-                    </Card.Text>
+                        {postComments}
                     </Card.Body>
                 </Card>
 
