@@ -21,8 +21,8 @@ function MakeComment({ match }) {
     const postComment = async () => {
         let newUserComment = document.querySelector(".addUsername").value
         let newComment =  document.querySelector(".commentArea").value
-        const url = `http://localhost:8000/api/comments/${match.params.id}/`
-        axios.put(url, {
+        const url = `http://localhost:8000/api/comments/`
+        axios.post(url, {
             post: info.id,
             author: newUserComment,
             body: newComment,
@@ -44,14 +44,14 @@ function MakeComment({ match }) {
                  onChange={(e) => setComment(e.target.value)}></Form.Control>
             </Form.Group>
  
-            {/* <Link to='/myprofile'> */}
+            <Link to='/myprofile'>
                 <Button  className="commentButton" variant="primary" type="submit"
                  onClick={() => {
                      postComment()
                  }}>
                 Post Comment
             </Button>
-            {/* </Link> */}
+            </Link>
         </Form>
         </div>
     )

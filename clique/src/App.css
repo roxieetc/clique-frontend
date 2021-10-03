@@ -88,7 +88,6 @@ body {
 
 .singlePost {
   margin: auto;
-  box-shadow: 10px 10px 15px #ececec;
   border: double 8px transparent;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #ff9100, rgb(255, 157, 173), #0e59fa);
@@ -171,7 +170,7 @@ body {
 .username {
   font-weight: 600;
   font-size: larger;
-  color: #2562e6;
+  color: #0c2e79;
 }
 
 .realName {
@@ -198,7 +197,6 @@ body {
   margin: auto;
   margin-top: 15vh;
   /* border: solid 3px white; */
-  box-shadow: 10px 10px 20px #ececec;
   padding: 30px 30px;
   background-image: linear-gradient(
     to bottom right,
@@ -234,7 +232,6 @@ body {
   margin: auto;
   margin-top: 5vh;
   /* border: solid 3px white; */
-  box-shadow: 10px 10px 20px #ececec;
   padding: 30px 30px;
   background-image: linear-gradient(
     to bottom right,
@@ -335,7 +332,6 @@ body {
   margin: auto;
   margin-top: 15vh;
   /* border: solid 3px white; */
-  box-shadow: 10px 10px 20px #ececec;
   padding: 30px 30px;
   background-image: linear-gradient(
     to bottom right,
@@ -375,9 +371,8 @@ body {
 .commentForm {
   max-width: 500px;
   margin: auto;
-  margin-top: 15vh;
+  margin-top: 8vh;
   /* border: solid 3px white; */
-  box-shadow: 10px 10px 20px #ececec;
   padding: 30px 30px;
   background-image: linear-gradient(
     to bottom right,
@@ -404,4 +399,23 @@ body {
 
 .addUsername {
   margin-bottom: 20px;
+}
+
+/* DARK MODE STYLING ------------------------------------------------- */
+
+.dark-mode {
+  background-color: #4c5c7e;
+  color: #ececec;
+}
+
+.dark-navi {
+  background-color: #7f95c4;
+}
+
+.fixedbutton {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  cursor: pointer;
+  max-width: 70px;
 }

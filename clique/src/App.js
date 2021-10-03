@@ -9,8 +9,17 @@ import PostInfo from './Components/PostInfo';
 import Register from './Components/Register';
 import UpdatePost from './Components/UpdatePost';
 import MakeComment from './Components/MakeComment';
+import DarkMode from './DarkMode.png';
 
 function App() {
+
+  function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  var element2 = document.querySelector(".navi")
+  element2.classList.toggle("dark-navi")
+}
+
   return (
     <div className="App">
       <Router>
@@ -26,6 +35,8 @@ function App() {
       <Route exact path='/comment/:id' component={MakeComment} />
       </Switch>
       </Router>
+
+      <img src={DarkMode} className="fixedbutton"  alt="dark mode button" onClick={darkMode} />
     </div>
   );
 }
