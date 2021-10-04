@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Clique
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clique is a photo-sharing social media app that applies all the fun aspects of group chatting, but with pictures! You can invite your friends to your account, have them sign up, and then the pictures posted will be exclusive to only you and the friends you have invited.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## App Images
 
-### `npm start`
+![HomeFeed](./src/Images/HomeFeed.png)
+![ProfilePage](./src/Images/UserProfile.png)
+![Comment Form](./src/Images/CommentForm.png)
+![Post Detail](./src/Images/PostDetail.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Django & SQL**: Backend models and database. Implemented Django REST framework to make database management easier to handle.
+- **ReactJS & Bootstrap**: For frontend development and API calls from backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**FRONTEND**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fork and clone this repository.
+- Run **`npm i`** followed y **`npm start`** to start the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**BACKEND**
 
-### `npm run eject`
+- Fork and clone the clique-backend repository.
+- Set up vitual environment by running **`pipenv shell`**.
+- Run **`python3 manage.py makemigrations`** and then **`python3 manage.py migrate`** to create database.
+- Finally, use **`python3 manage.py runserver`** to start the server.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## User Stories
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- As a user, I would like to be able to post, edit, and delete pictures from the account.
+- As a user, I would like to be able to comment on other pictures and accounts so that I can interact with other users.
+- As a user, I would like to have my own account, so that I can have pictures linked to my acocunt.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Unsolved Problems
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Unsolved Problems**: Getting dark mode to function throughout the app is something I simply just did not have enough time to work through by the deadline. Other problems that need fixing are redirect issues and reverse mapping issues.
