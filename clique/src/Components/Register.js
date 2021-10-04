@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from "axios";
 
@@ -76,9 +77,11 @@ function Register() {
                     <Form.Control as="textarea" rows={3} placeholder="Profile pic URL" onChange={storeProfilePic} />
                 </Form.Group>
                 
+                <Link to="/home">
                 <Button className="registerButton" variant="primary" type="submit" onClick={newUser}>
                     Register 
                 </Button>
+                </Link>
             </Form>
         </div>
     )
