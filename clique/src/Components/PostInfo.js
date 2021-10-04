@@ -30,9 +30,6 @@ function PostInfo({ match }) {
         getComment()
     }, []);
 
-    // console.log(comment.map((feed) => { return (feed.post)}))                Will  pull all comments' post values
-    // console.log(info.id)                                                     Will pull the post id that is being matched in the parameter.
-
     let theseComments = [];
     for(let i = 0; i < comment.length; i++) {
         if (comment[i].post === info.id) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../Clique2Color.png';
-import profile from '../profile.png';
-import newpost from '../newpost.png';
-import signout from '../signout.png';
-import home from '../homebutton.png';
+import logo from '../Images/Clique2Color.png';
+import profile from '../Images/profile.png';
+import newpost from '../Images/newpost.png';
+import signout from '../Images/signout.png';
+import home from '../Images/homebutton.png';
 
 function NavBar() {
 

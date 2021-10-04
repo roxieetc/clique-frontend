@@ -34,15 +34,6 @@ function UpdateProfile({ match }) {
             <hr />
         <Form>
         <Image src={info.post_pic} className="picPreview" rounded />
-        {/* <Form.Group className="mb-3" controlId="author">
-                <Form.Label>Author:</Form.Label>
-                <Form.Control className="editauthor" as="textarea" rows={3} defaultValue={info.author} />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="post_pic">
-                <Form.Label>Image:</Form.Label>
-                <Form.Control className="editcaption" as="textarea" rows={3} defaultValue={info.post_pic} />
-            </Form.Group> */}
 
             <Form.Group className="mb-3" controlId="caption">
                 <Form.Label>Caption:</Form.Label>

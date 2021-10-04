@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import { Container, Image, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function HomeFeed() {
@@ -30,11 +30,7 @@ function HomeFeed() {
     let profileFeed = posts.reverse().map((item) => {
         return(
             <div>
-            {/* <Col sm={3}> */}
-                {/* <Card style={{ width: "20rem"}}> */}
                 <Link className="thisPost" to={`/${item.id}`}><img src={item.post_pic} className="galleryImage"  /></Link>
-                 {/* </Card> */}
-            {/* </Col> */}
             </div>
         )
     })
@@ -61,9 +57,7 @@ function HomeFeed() {
             </div>
             <hr />
             <div className="myPosts">
-                {/* <Row>     */}
                     {profileFeed}
-                {/* </Row> */}
             </div>
        
         </div>

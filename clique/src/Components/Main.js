@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import BigLogo from '../CliqueColorBig.png'
+import BigLogo from '../Images/CliqueColorBig.png'
 
 const Main = () => {
 
@@ -13,7 +13,6 @@ const Main = () => {
             <p className="welcomeText">A photo-sharing app for you and your friends to share adventures, memories, memes, and more.
             Invite your friends to your personal clique account to get started in your sharing experience.</p>
             <Link to='/register'><button className="mainButton1">Sign Up</button></Link>
-            {/* <button className="mainButton2">Log In</button> */}
         </div>
     )
 }

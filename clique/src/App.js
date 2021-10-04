@@ -9,7 +9,7 @@ import PostInfo from './Components/PostInfo';
 import Register from './Components/Register';
 import UpdatePost from './Components/UpdatePost';
 import MakeComment from './Components/MakeComment';
-import DarkMode from './DarkMode.png';
+import DarkMode from './Images/DarkMode.png';
 
 function App() {
 
